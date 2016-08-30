@@ -441,22 +441,12 @@ class set_clock (InputProgramRequired):
   """ Set clock.
 
 
-  -------------------
-
-
   input should be the name of a json file, or `-` for stdin.
   The json file should contain a key named `clock` with the new
   requested value formatted as ISO 8601 including seconds.
 
 
       { "clock": "2016-03-14T14:23:40" }
-
-
-  -------------------
-
-
-  `--to` switch
-  -------------------
 
 
   Alternatively, the `--to` switch maybe used:
@@ -467,7 +457,9 @@ class set_clock (InputProgramRequired):
 
 
       --to now
+
       --to $(date -Iseconds)
+      
       --to 2016-03-14T14:29:41-0700
 
   """
@@ -530,9 +522,6 @@ class bolus (InputProgramRequired):
   Beware! This is a powerful command because it can give a lot of
   insulin.  Please be careful!
   Not a part of oref0.
-
-
-  -----------------------
 
 
   Requires json input with the following keys defined:
